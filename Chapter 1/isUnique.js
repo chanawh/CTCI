@@ -1,6 +1,8 @@
+// 1.1 Is Unique: Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
+
 // 1. Using a Set
 
-function isUniqueCharsUsingSet(str) {
+function isUniqueUsingSet(str) {
   const uniqueChars = new Set(str);
   // console.log("Set contents:", Array.from(uniqueChars)); // View the set
   // console.log("String size:", str.length);
@@ -10,12 +12,12 @@ function isUniqueCharsUsingSet(str) {
 // const string1 = "hello";
 // const string2 = "helloworld";
 
-// console.log(isUniqueCharsUsingSet(string1));
-// console.log(isUniqueCharsUsingSet(string2));
+// console.log(isUniqueUsingSet(string1));
+// console.log(isUniqueUsingSet(string2));
 
 // 2. Without Additional Data Structures
 
-function isUniqueCharsWithoutSet(str) {
+function isUniqueWithoutSet(str) {
   for (let i = 0; i < str.length; i++) {
     for (let j = i + 1; j < str.length; j++) {
       if (str[i] == str[j]) {
@@ -29,8 +31,8 @@ function isUniqueCharsWithoutSet(str) {
 const string1 = "hello";
 const string2 = "helloworld";
 
-console.log(isUniqueCharsWithoutSet(string1));
-console.log(isUniqueCharsWithoutSet(string2));
+console.log(isUniqueWithoutSet(string1));
+console.log(isUniqueWithoutSet(string2));
 
 // 1. Using a Set:
 // Time Complexity: O(n), where n is the length of the string. This is because:
