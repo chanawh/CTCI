@@ -1,6 +1,6 @@
 // 1. Using a Set
 
-function hasUniqueCharsUsingSet(str) {
+function isUniqueCharsUsingSet(str) {
   const uniqueChars = new Set(str);
   // console.log("Set contents:", Array.from(uniqueChars)); // View the set
   // console.log("String size:", str.length);
@@ -10,12 +10,12 @@ function hasUniqueCharsUsingSet(str) {
 // const string1 = "hello";
 // const string2 = "helloworld";
 
-console.log(hasUniqueCharsUsingSet(string1));
-console.log(hasUniqueCharsUsingSet(string2));
+// console.log(isUniqueCharsUsingSet(string1));
+// console.log(isUniqueCharsUsingSet(string2));
 
 // 2. Without Additional Data Structures
 
-function hasUniqueCharsWithoutSet(str) {
+function isUniqueCharsWithoutSet(str) {
   for (let i = 0; i < str.length; i++) {
     for (let j = i + 1; j < str.length; j++) {
       if (str[i] == str[j]) {
@@ -29,8 +29,8 @@ function hasUniqueCharsWithoutSet(str) {
 const string1 = "hello";
 const string2 = "helloworld";
 
-console.log(hasUniqueCharsWithoutSet(string1));
-console.log(hasUniqueCharsWithoutSet(string2));
+console.log(isUniqueCharsWithoutSet(string1));
+console.log(isUniqueCharsWithoutSet(string2));
 
 // 1. Using a Set:
 // Time Complexity: O(n), where n is the length of the string. This is because:
